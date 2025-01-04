@@ -15,34 +15,46 @@ https://www.microsoft.com/en-us/software-download/windows10
 ## Prepare the files:
 
 Download and install VirtualBox first, then download and install VirtualBox extension Pack
+![Download_VM](https://github.com/user-attachments/assets/e714b563-51a6-4881-b499-c36d3377fd35)
 
 Download and run the Windows 10 media installer, select the option to download the Windows 10 ISO, then save the ISO to a folder of your choice 
 
+![Create_Windows10_ISO](https://github.com/user-attachments/assets/617ba2b8-d709-41b5-bace-8bcc82407bee)
+![Create_Windows10_ISO (2)](https://github.com/user-attachments/assets/43e87fe9-9ebf-4f79-8359-baea894d160f)
+
 Download Windows Server 2019 ISO directly from the link above and save it to a folder of your choice
+![DownloadWindowsServer](https://github.com/user-attachments/assets/778d5dcb-30d4-4d45-8c2c-2aec4f52d23d)
 
 ## Domain Controller
 
 **Create the VM (virtual machine) for the Domain Controller**
 
 Open VirtualBox and select New to create a new VM
+![VB_Create_VM](https://github.com/user-attachments/assets/f3ecd392-ff5d-496e-869a-6b4b57f052b5)
 
 Give the VM a name like DC 
 
 Select the Windows 2019 server ISO
 
 Make sure to check "Skip unattended install"
+![DC_VM_Setup_1](https://github.com/user-attachments/assets/cce49cb4-c4a7-4af9-b3d7-824af373b719)
 
 Under hardware you can select how much RAM and how many CPU cores you want to give the VM.  I have 8 cores / 16 threads and 32 gigs of RAM on my host machine so I gave my VM 4096mb RAM and 2 CPU cores.  The more RAM and cores you can give the VM the faster it will be.
 
 Hit Finish
+![DC_VM_Setup2](https://github.com/user-attachments/assets/5ad6ccc7-3c39-4ca1-8ff4-d4ee6066a17f)
 
 Under Settings go to expert mode
+![DC_VM_Settings](https://github.com/user-attachments/assets/4e8ad6d7-76b3-400d-8305-6ed32916b04c)
 
 Go to network, select Adapter 1, make sure it is enabled and that it is attached to NAT network
+![DC_VM_Network1](https://github.com/user-attachments/assets/6d8a904e-ddb2-431e-9867-f33e9cf10d88)
 
 Select Adapter 2, enable it, ensure it is attached to Internal network
+![DC_VM_Network2](https://github.com/user-attachments/assets/77f2b4b9-afd4-4539-9656-b67ac3cbe5e9)
 
 Hit Start on the DC virtual machine
+![DC_Start_VM](https://github.com/user-attachments/assets/1b774521-b446-4223-be6a-ea1dad7be60e)
 
 **Install Windows on the Domain Controller**
 
@@ -50,21 +62,29 @@ The DC virtual machine should boot up into the Windows Server installation
 
 Install Windows Server 2019
 
+Choose Desktop Experience
+![DC_Windows_Server_Install1](https://github.com/user-attachments/assets/bfa02ce0-23fd-4315-8862-d18610da73a3)
+
 Choose clean install
+![DC_Windows_Server_Install2](https://github.com/user-attachments/assets/ba056825-ea4e-41fe-99cc-96509a5e23b2)
 
 When choosing which disk to install to just select the unallocated space and hit next
+![DC_Windows_Server_Install4](https://github.com/user-attachments/assets/35c7bb96-090a-4268-80f2-078c0c2bbb26)
 
 Once you get through the installation process, give the initial account a password. For lab purposes make it easy like Password1
 
 When you sign on you need to use the input menu at the top of the VM window to select CTRL-ALT-DELETE.  If you ever find your mouse gets imprisoned within the VM window you can press the right CTRL button on your keyboard to free it.
+![Windows_Logon_CTRL-ALT-Delete](https://github.com/user-attachments/assets/0a1e5512-706d-4985-84e0-fe159cd35c3e)
 
 You will login as a local Administrator with Password1
 
 Once logged in I would select "yes" to allow this PC to be discoverable by other PC’s and devices on this network.  This actually won't work at this point since Server 2019 has some services turned off by default.  We'll turn these services on later.
 
 Install VM guest additions. This will improve performance while working with the VM's.  Go to devices at the top of the VM window and select Insert Guest Additions CD Image.
+![Guest_Additions1](https://github.com/user-attachments/assets/6de5b3da-2610-408d-8a3a-95f841c76b97)
 
 Go to file explorer (the folder icon at the bottom of the taskbar) and go to This PC and double click Virtual Box guest additions CD. Install the one ending in AMD64.
+![Guest_Additions2](https://github.com/user-attachments/assets/2373fbdb-c63e-4a3d-90ce-23bf4cfb6109)
 
 Restart Windows and login as Administrator again
 
@@ -75,12 +95,18 @@ Login
 Right click on the network icon in the lower right of the Windows Server
 
 Change adapter settings
+![Change_Adapter_settings](https://github.com/user-attachments/assets/6fa10e82-f66a-4053-a3d0-7ffa23e92335)
 
 Right click on one of the adapters and click Status and then Details
 
 The one that has an IP starting with 10 is your Internet adapter. Right click and rename the adapter to Internet.
+![Internet_IP](https://github.com/user-attachments/assets/eda13b12-9f33-4c0e-be8c-95378e359616)
 
-The one that has an IP starting with 169 is your Internal adapter. Rename it to Internal. This internal adapter will connect to the internal adapters of the other VM's/computers later on in our lab.  We will need to give it a static IP and DNS address.
+The one that has an IP starting with 169 is your Internal adapter. Rename it to Internal. 
+![Internal_identification](https://github.com/user-attachments/assets/71d5fde7-4dc9-4137-b6a3-88b0305c3fc0)
+![Rename_Adapters](https://github.com/user-attachments/assets/73c53ac2-74df-49b9-8440-913dc24577e8)
+
+This internal adapter will connect to the internal adapters of the other VM's/computers later on in our lab.  We will need to give it a static IP and DNS address.
 
 Right click properties select IPV4
 
@@ -94,11 +120,18 @@ Preferred DNS: 172.16.0.1 (you can also use 127.0.0.1 but I have better luck usi
 
 Alternate DNS: you can leave this blank
 
+![Internal_IP](https://github.com/user-attachments/assets/faf6e4c4-75cb-4605-bd3d-9cf97875fe3b)
+
+
 **Give the Domain Controller a name**
 
 Even though the VM is named DC, its "Windows" name is still default.  We should rename it to DC.
 
 Right click on the Start menu and select System and select Rename this PC and name it DC
+![System](https://github.com/user-attachments/assets/8a4c5b89-e2bc-44a9-9c48-79a8fdf51390)
+![Rename](https://github.com/user-attachments/assets/ca4366a7-ca01-4355-ab49-53377df39b18)
+![Rename_to_DC](https://github.com/user-attachments/assets/d617c09d-2893-4214-b7f6-36ca18a901d3)
+![Restart_Rename](https://github.com/user-attachments/assets/5355dd69-e99b-45f3-a63b-f3ac505d1e4d)
 
 Restart Windows Server and login again
 
