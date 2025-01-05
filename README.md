@@ -337,14 +337,20 @@ Give it a name like CL1
 Select the Windows 10 ISO
 
 Skip unattended install
+![CL_VM_name](https://github.com/user-attachments/assets/8a701322-2111-484a-b0c8-b0c18c019aec)
 
 Under hardware give it 4096mb RAM and 2 CPU cores
+![CL1_VM_CPU_RAM](https://github.com/user-attachments/assets/c858083a-f228-47f2-a169-4fe7ae6601f0)
+
+For hard drive leave it at default size
+![CL1_VM_Hard_drive](https://github.com/user-attachments/assets/ac3c88a2-5c91-44b9-886b-622209872922)
 
 Hit Finish
 
 Under settings go to expert mode
 
 Select Adapter 1, enable it, ensure it is attached to Internal network
+![CL1_VM_Network](https://github.com/user-attachments/assets/b3cae830-3506-4075-bbad-8da7772b25a4)
 
 **Install Windows 10 on CL1**
 
@@ -353,8 +359,10 @@ Hit Start on the CL1 virtual machine
 Install Windows 10
 
 Select I don’t have a product key
+![CL1_windows_install](https://github.com/user-attachments/assets/e78faa16-0b62-42a9-b87c-5b49cf10333c)
 
 Select Windows 10 Pro
+![CL1_Windows_Pro_install](https://github.com/user-attachments/assets/878eebf7-ec1e-42a2-8453-bc90c9ff37e3)
 
 Hit next on unallocated space
 
@@ -367,6 +375,7 @@ I would opt out of all the options for the next few screens until setup is compl
 Once setup is complete, Install VM guest additions.  Go to devices at the top of the VM window and select Insert Guest Additions CD Image.
 
 Go to file explorer, This PC, and double click Virtual Box guest additions CD.  Install the one ending in AMD64.
+![VBox_WindowsAdditions_AMD64](https://github.com/user-attachments/assets/09ecf274-bcc2-4902-9279-9d916f732460)
 
 Restart Windows 10
 
@@ -377,16 +386,21 @@ Login as User
 Right click Start Menu
 
 Go to System
+![CL1_system](https://github.com/user-attachments/assets/73f11ade-d87f-4dbb-84a3-9132f6b85a8e)
 
 Rename this PC advanced
+![Cl1_rename_PC_advanced](https://github.com/user-attachments/assets/4cef4d90-16a6-4ccc-9e28-3c5354a109eb)
 
 Change name
+![Cl1_rename_change](https://github.com/user-attachments/assets/d8764a50-09ed-4a5c-aecd-b0bffc7c7adc)
 
 Rename it to CL1
 
 Domain is mydomain.com
+![Cl1_rename_change2](https://github.com/user-attachments/assets/a7a82691-b572-4635-ae06-96be2c3e1162)
 
 Use the domain admin account credentials (the user you created in the _ADMIN folder on the DC) to join mydomain.com
+![Cl1_rename_change_3](https://github.com/user-attachments/assets/147abb5c-02e4-4693-9591-f1b528809c07)
 
 Restart Windows 10
 
@@ -451,7 +465,7 @@ Rename this PC advanced
 
 Change name
 
-Rename it to CL1
+Rename it to CL2
 
 Domain is mydomain.com
 
@@ -475,8 +489,10 @@ Give it a name like FS1
 Select the Windows 2019 server iso
 
 Skip unattended install
+![FS1_VM](https://github.com/user-attachments/assets/70e72ef9-426a-4052-9155-eba1d6f828db)
 
 Under hardware give it 4096mb RAM and 2 CPU cores
+![FS1_VM2](https://github.com/user-attachments/assets/b1332735-3e95-4171-83ed-b5b7a1440a73)
 
 Hit Finish
 
@@ -495,8 +511,10 @@ Install Windows Server 2019 Standard Edition (desktop edition)
 Give the initial account a password. For lab purposes make it easy like “Password1”
 
 Install VM guest additions. Go to devices at the top of the VM window and select Insert Guest Additions CD Image.
+![FS1_guest_additions](https://github.com/user-attachments/assets/a8ed79aa-3ff0-4ef8-935f-85b91b1e1bf4)
 
 Go to file explorer, go to This PC, open the Virtual Box guest additions CD. Install the one ending in AMD64.
+![FS1_guest_additions2](https://github.com/user-attachments/assets/c73dd66e-62ec-4844-b8d2-89c9c784fae8)
 
 Restart Windows Server
 
@@ -507,18 +525,22 @@ Log into Windows Server
 Right click Start Menu
 
 Hit System
+![start_system](https://github.com/user-attachments/assets/7266e18c-873a-47e7-9ae5-684dc2d4d924)
 
 Hit System Info
 
 Under computer name, domain and workgroup settings select change settings
+![change_settings](https://github.com/user-attachments/assets/0ce77c69-0674-4c57-bcfc-2f2651acc93f)
 
 Click change
+![change](https://github.com/user-attachments/assets/61339bd2-8bcf-44f7-8f89-158e12d314f7)
 
 Rename it to FS1
 
 Domain is mydomain.com
 
 Use the domain admin account for credentials
+![change_name_auth](https://github.com/user-attachments/assets/7ec0e8c3-4f6b-42aa-8b79-0a8102aae4dc)
 
 Shut down Windows server
 
@@ -529,24 +551,31 @@ Back to Virtualbox Manager
 FS1 should be powered off.
 
 Select FSI and go to Settings.
+![settings](https://github.com/user-attachments/assets/71da2b8f-cbc3-4570-b45c-dff46c8d2d58)
 
 Go to Storage
 
 Next to Controller: SATA there is an icon to add a hard disk.  Click it.
+![add_hard_disk](https://github.com/user-attachments/assets/6ff3cc15-5a7e-4f08-a53f-bd9d18c65204)
 
 At the Hard Disk selector screen hit Create
+![create_HD_1](https://github.com/user-attachments/assets/ce79a52f-1098-418c-838d-b5a19fd62b8b)
 
 Use the default name.  Mine is called FS1_1
 
 For size 10 gigs will be enough for the lab.
+![create_HD_2](https://github.com/user-attachments/assets/d0892803-157b-442a-b0d9-9eb312934272)
 
 Hit finish 
 
 In Hard Disk selector you will see it is listed under Not Attached.  
+![unattached_drive](https://github.com/user-attachments/assets/e0ba3955-9d82-478c-b239-4e477420fcce)
 
 Just double click on the name and it will attach itself.  
 
 You'll see it listed under Controller: SATA
+
+![attached_drive](https://github.com/user-attachments/assets/0bea0629-0d34-49b1-9464-72d6f49b2092)
 
 **Add the second hard drive to Windows**
 
@@ -557,36 +586,45 @@ Log into Windows Server with the domain account we created earlier
 Right click on the start menu and hit Run
 
 Type in diskmgmt.msc
+![dismgmt](https://github.com/user-attachments/assets/96ca6991-5016-4d25-a80b-b647d3b0e253)
 
 The disk we just attached to the FS1 virtual machine will now initialize in Windows
 
 Once initialized it will resemble a black bar
+![initialize_disk](https://github.com/user-attachments/assets/07bf3a47-74f6-48bf-b6ec-df2f05e7a8f3)
 
 Right click on it and create a simple volume using all the default settings
+![new_simple_volume](https://github.com/user-attachments/assets/dfc833ca-dcfb-47d5-9f66-be6711ea1e8a)
+![new_simple_volume2](https://github.com/user-attachments/assets/861edd91-67d7-4f8b-b7b9-767432a86d5c)
+![new_simple_volume_4](https://github.com/user-attachments/assets/36cee744-0bc3-414a-9231-77d87f42ad2d)
+![New_simple_volume5](https://github.com/user-attachments/assets/7af59256-3961-452d-8847-c17d236ae9f1)
 
 Once finished you can go to file explorer and under This PC see that there is now a second hard drive.  Mine is setup as E: drive
+![network_share_1](https://github.com/user-attachments/assets/711159b1-bcf4-4ee1-a9be-578f3e989baa)
 
 **Create a network share in Windows**
 
 For lab purposes we’re going to create a network share at the root of E: drive. 
 
 Create a folder at the root of the E: Drive called SoftwareDeploy. 
+![SoftwareDeploy_folder](https://github.com/user-attachments/assets/b739a3d6-6cbf-4fc3-9b12-6a7708cd839e)
 
 Right click SoftwareDeploy
 
 Hit properties
+![Software_deploy_properties](https://github.com/user-attachments/assets/15e096e1-5074-4603-9466-6e297f4da2c1)
 
 Go to the sharing tab
 
 Click share
+![FS1_share](https://github.com/user-attachments/assets/4d2427de-2560-4bda-b7ef-1cd430b4558f)
 
 Type in Domain Computers and hit Add
 
 Type in Domain Users and hit Add
+![FS1_share_domain_admins_users](https://github.com/user-attachments/assets/1072d8af-e186-436e-96d0-faceb65ea4cf)
 
 Give both only Read only access.  
-
-If there is a listing for "Everyone", remove it.  
 
 Hit Share at the bottom.
 
@@ -597,16 +635,21 @@ Edit permissions
 Add Domain Users 
 
 Add Domain computers
+![domain_computers_security_add](https://github.com/user-attachments/assets/ef326b7b-3194-4695-a657-1007b4453e70)
 
 Give both read access only 
+![domain_computers_security_read_only](https://github.com/user-attachments/assets/b1058977-d104-4a74-b924-37a6e850cc8f)
 
-Remove "Everyone" if that is listed
 
 Hit OK and finish
 
 **Download Firefox and Chrome**
 
 At the server manager dashboard hit Configure this local server and turn off IE Enhanced Security Configuration
+
+![configure_this_local_server](https://github.com/user-attachments/assets/da54d6f0-b542-43b2-a0e7-2546af4dd747)
+![turn_off_ie_security2](https://github.com/user-attachments/assets/920fe2cc-3047-4537-a08b-1802ff207f70)
+![FS1_IE_security_off_2](https://github.com/user-attachments/assets/7e517d24-63ed-4055-aaea-a06093ca01d4)
 
 Open Internet Explorer
 Go to https://www.mozilla.org/en-US/firefox/all/desktop-release/](https://www.mozilla.org/en-US/firefox/all/desktop-release/
@@ -626,18 +669,43 @@ By default Windows server has services disabled or off that prevents network dis
 Right click on start
 
 Click Run
+![run](https://github.com/user-attachments/assets/fefa3673-4387-45ec-b686-47ce9d4eeb35)
 
 Type in Services.msc
+![services msc](https://github.com/user-attachments/assets/e8144858-e7f8-4b0e-8252-d12a23e11b66)
 
 Right click the following services and set to automatic and right click to start them:
 
 Function Discovery Provider Host
+![function_discovery_provider_auto](https://github.com/user-attachments/assets/3ad5443e-2433-4786-befb-9928109c9f87)
+![Function_Discovery_provider_host_start](https://github.com/user-attachments/assets/4d93ef5e-f811-4f20-bf85-ff5528d6aa7a)
 
 Function Discovery Resource Publication
+![Function_discovery_resource_publication_start](https://github.com/user-attachments/assets/841e4a0a-b22d-4512-ac5d-47fb3987385b)
 
 SSDP Discovery
+![ssdp_auto](https://github.com/user-attachments/assets/b19308f8-415f-4d09-9dc9-7d51240bde58)
+![SSDP_discovery_start](https://github.com/user-attachments/assets/be19d609-adcd-4980-af92-c94a97ecff5f)
 
 UPnP Device Host
+![UPNP_auto](https://github.com/user-attachments/assets/9c32f817-f2d9-4f21-9c7b-9ae560e66602)
+![UPNP_start](https://github.com/user-attachments/assets/dba6a6d9-bf2b-4a02-9072-53e144dad69f)
+
+Right click on the network icon on the desktop
+![right_click_network_adapter](https://github.com/user-attachments/assets/6850942b-156b-4cb1-8ef9-47d393357cd8)
+
+Open network and internet settings
+![open_network_sharing_settings](https://github.com/user-attachments/assets/2f5b4a2d-b0f3-4c8a-9ae7-c3094cb116bd)
+
+Click Network and Sharing Center
+![open_network_and_sharing_center](https://github.com/user-attachments/assets/934dd498-4f30-49f5-ab36-ee89cd71d76e)
+
+Click Change advanced sharing settings
+![change_advanced_sharing_settings](https://github.com/user-attachments/assets/4da2a102-c625-414b-9229-139874d9d7ff)
+
+Under Domain (current profile) Turn on network discovery
+![change_advancedsharing_settings](https://github.com/user-attachments/assets/6691f10a-6e61-42ec-8617-bb0d93966ecb)
+![turn_on_network_discovery](https://github.com/user-attachments/assets/9beee97a-50a4-4242-a001-7ed2b4c6e7a7)
 
 ## Group Policy Edit
 
