@@ -187,22 +187,31 @@ Hit the Start button
 Go to Windows Administrative Tools
 
 Go to Active Directory users and Computers
+![AD_Users_Computers](https://github.com/user-attachments/assets/f29a94d0-7803-42da-876e-6da756ebb3db)
 
 Right click on mydomain and create New Organizational Unit and name it _ADMINS
+![new_OU_admins](https://github.com/user-attachments/assets/53fcdb4a-462d-4ac6-b412-1d518f1635d3)
+![new_OU_admin2](https://github.com/user-attachments/assets/bb2566d0-bc72-45a0-8587-37b220bfb4d8)
 
 Once _ADMINS is created right click on it and create new user
+![new_user](https://github.com/user-attachments/assets/f77d1e38-ce1a-446b-b1ef-8f617e1b9e62)
 
 Enter first name, last name and logon name. The typical naming convention for a logon name would be first initial of your first name and full last name. So for John Doe it would be jdoe. For an admin logon put an a- in front of it so it would be a-jdoe. My name is Angel Toquero so I use a-atoquero
+![new_user2](https://github.com/user-attachments/assets/27862ece-24bd-4af8-b089-a534c5960bec)
 
 Give the user an easy password for lab purposes, like Password1.
 
 For lab purposes, Uncheck user must change password at logon
 
 For lab purposes, Check password never expires
+![new_user3](https://github.com/user-attachments/assets/f4c97920-13c4-4b9e-916e-e9bb63fb848f)
 
 Once created, select the _ADMINS folder and right click the user you just made and select Properties
+![domain_admins1](https://github.com/user-attachments/assets/9e0b2ba0-27b0-4d3a-867b-8cc34a16e28c)
 
 Select MemberOf, select Add. Where it says enter the object names to select type in Domain Admins and click Check Names then press OK
+![domain_admins2](https://github.com/user-attachments/assets/4d61141a-93e8-4082-a392-500a057c8d69)
+![domain_admins3](https://github.com/user-attachments/assets/39057100-194e-457f-bc14-c1f8aae80e0f)
 
 You now have a domain admin account created
 
