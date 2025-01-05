@@ -142,10 +142,13 @@ At the Server Manager dashboard hit Add Roles and Features
 Hit next on the Before you Begin screen
 
 Check the Role-based or feature-based installation and hit Next
+![Add_roles_features](https://github.com/user-attachments/assets/963b4491-ad84-4ea7-baeb-1ecf14f900cb)
 
 Check select a server from the server pool; it should be just the DC server
+![Select_server_pool](https://github.com/user-attachments/assets/95d022c0-434a-48d4-be55-daba3edd9971)
 
 Install Active Directory Domain Services
+![Select_Active_directory_domain_services](https://github.com/user-attachments/assets/726fcc82-91d2-4b76-84f2-25bab17082bf)
 
 Hit next until you get to Install and then Finish
 
@@ -154,16 +157,20 @@ Go up to the yellow flag on upper right of the Server Manager dashboard
 Promote this server to a domain controller
 
 Add new forest
+![Add_forest](https://github.com/user-attachments/assets/8fb04c9e-949e-4d7f-a92b-9c1d84ed961a)
 
 Name the domain mydomain.com for lab purposes
 
 Use the password you created earlier Password1
+![DSRM_password](https://github.com/user-attachments/assets/c7a9fbea-1d9b-4e43-9aef-d45dcbba249e)
 
 Leave DNS delegation unchecked
 
 Let the NetBios domain name autofill to MYDOMAIN
+![Netbios_MYDOMAIN](https://github.com/user-attachments/assets/77281094-b661-427f-9b0b-44007e73d179)
 
 Keep hitting Next until you get to Install
+![Install](https://github.com/user-attachments/assets/4bbfc9b9-7dbd-4813-80b3-451059408680)
 
 Restart Windows Server
 
@@ -216,8 +223,10 @@ Check the Role-based or feature-based installation and hit Next
 Check select a server from the server pool; it should be just the DC server
 
 Install Remote Access
+![Install_Remote_access](https://github.com/user-attachments/assets/63e2d972-71a5-48bd-bbc8-23497ae0afd4)
 
 Install Routing
+![Select_Routing](https://github.com/user-attachments/assets/3c3c5535-6d63-4bca-90d9-333e13d65f62)
 
 Finish
 
