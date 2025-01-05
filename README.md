@@ -135,7 +135,7 @@ Right click on the Start menu and select System and select Rename this PC and na
 
 Restart Windows Server and login again
 
-**Install Domain Services**
+**Install Domain Services, DHCP Server, DNS Server, Remote Access**
 
 At the Server Manager dashboard hit Add Roles and Features
 
@@ -147,12 +147,18 @@ Check the Role-based or feature-based installation and hit Next
 Check select a server from the server pool; it should be just the DC server
 ![Select_server_pool](https://github.com/user-attachments/assets/95d022c0-434a-48d4-be55-daba3edd9971)
 
-Install Active Directory Domain Services
-![Select_Active_directory_domain_services](https://github.com/user-attachments/assets/726fcc82-91d2-4b76-84f2-25bab17082bf)
+Install Active Directory DHCP Server, DNS Server, Remote Access
+![Install_everything](https://github.com/user-attachments/assets/6d779d0e-3e30-4e8e-a8e8-582ff376e612)
+
+Install Routing, Direct Access and VPN
+![Select_Routing](https://github.com/user-attachments/assets/3c3c5535-6d63-4bca-90d9-333e13d65f62)
 
 Hit next until you get to Install and then Finish
 
+**Promote this server to a Domain Controller**
+
 Go up to the yellow flag on upper right of the Server Manager dashboard
+![yellow_flag](https://github.com/user-attachments/assets/28cb8765-43bf-49e4-b58e-eb0ce20acb46)
 
 Promote this server to a domain controller
 
@@ -221,23 +227,7 @@ At the sign on screen you can Select other user
 
 Type in the domain admin logon name and password you just created
 
-**Install NAT on the Domain Controller**
-
-At the Server Manager dashboard hit Add Roles and Features
-
-Hit next on the Before you Begin screen
-
-Check the Role-based or feature-based installation and hit Next
-
-Check select a server from the server pool; it should be just the DC server
-
-Install Remote Access
-![Install_Remote_access](https://github.com/user-attachments/assets/63e2d972-71a5-48bd-bbc8-23497ae0afd4)
-
-Install Routing
-![Select_Routing](https://github.com/user-attachments/assets/3c3c5535-6d63-4bca-90d9-333e13d65f62)
-
-Finish
+**Configure NAT on the Domain Controller**
 
 In Windows Server manager, go to tools in the upper right corner, select Routing and Remote access
 ![tools_routing_remote_access](https://github.com/user-attachments/assets/b81cd6c8-c22e-406a-8002-dae11725353e)
@@ -258,17 +248,7 @@ Once they pop up select the Internet adapter.
 
 Hit next and finish.
 
-**Install DHCP server on the Domain Controller**
-
-At the Server Manager dashboard hit Add Roles and Features
-
-Hit next on the Before you Begin screen
-
-Check the Role-based or feature-based installation and hit Next
-
-Check select a server from the server pool; it should be just the DC server
-
-Select DHCP, hit next and finish
+**Configure DHCP server on the Domain Controller**
 
 At Server Manager dashboard go up to tools and select DHCP
 
