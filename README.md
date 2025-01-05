@@ -240,16 +240,21 @@ Install Routing
 Finish
 
 In Windows Server manager, go to tools in the upper right corner, select Routing and Remote access
+![tools_routing_remote_access](https://github.com/user-attachments/assets/b81cd6c8-c22e-406a-8002-dae11725353e)
 
 Right click DC and configure and enable
+![Configure_and_enable_Routing](https://github.com/user-attachments/assets/86988c34-34cc-4475-ad99-54b0548cc683)
 
 Select NAT and hit next
+![configure_NAT](https://github.com/user-attachments/assets/663d8e2d-0eb1-4bdd-aeeb-2bf06a11c1e5)
 
 Under use the public interface to connect to the Internet you should see your internal and internet adapters
 
 If you don’t see your internal and internet adapters hit cancel, close Routing and Remote access and open it again from the Tools menu. Right click DC, hit configure and enable and see if the network adapters pop up.
+![configure_NAT2](https://github.com/user-attachments/assets/727b39b5-4e47-4a47-bdea-c9597e026f2c)
 
 Once they pop up select the Internet adapter. 
+![configure_NAT3](https://github.com/user-attachments/assets/88f914f3-eda7-450b-8272-edf397a39d73)
 
 Hit next and finish.
 
