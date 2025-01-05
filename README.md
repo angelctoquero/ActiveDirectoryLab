@@ -255,8 +255,10 @@ At Server Manager dashboard go up to tools and select DHCP
 Under dc.mydomain.com 
 
 Right click IPv4 and select New scope
+![new_scope](https://github.com/user-attachments/assets/b43bbfe7-772b-4a7b-afe3-0bd8d006430c)
 
 Name the scope 172.16.0.100-200
+![scope_name](https://github.com/user-attachments/assets/a06f79cd-01a2-457b-a607-9dd3fc4bbc89)
 
 Hit next
 
@@ -267,20 +269,27 @@ Start IP address 172.16.0.100
 End IP address 172.16.0.200
 
 Length 24, subnet mask 255.255.255.0
+![scope_range](https://github.com/user-attachments/assets/15dfd18f-9a50-417b-b9c1-b5d9d8610e9f)
 
 Hit next
 
 For add Exclusions and Delay leave it all blank and hit next
+![exclusions_delay](https://github.com/user-attachments/assets/3324c887-b20b-4353-91d6-5e4e6c5ff5d1)
 
 For lease duration I just leave it at 8 hours
+![lease_duration](https://github.com/user-attachments/assets/8537e81e-1a34-42f9-87ac-f9b6247be8d7)
 
 Hit next
 
 For configure DHCP options select Yes, I want to configure these options now
+![configure_DHCP_options](https://github.com/user-attachments/assets/dddb9042-775c-48b4-9e0e-35f8071effab)
 
 Hit next
 
 The IP of our internal network adapter will be our gateway IP, so input 172.16.0.1 and hit add
+![internal_IP](https://github.com/user-attachments/assets/2dc0858c-8aaa-4204-8a45-42732ba04be0)
+![default_gateway_IP](https://github.com/user-attachments/assets/e304a464-7310-4735-aec0-17b486e8345d)
+![default_gateway_ip2](https://github.com/user-attachments/assets/144d4d49-2647-42d7-b665-11aae7ba61b8)
 
 Hit next
 
@@ -291,18 +300,31 @@ parent domain is mydomain.com
 The IP of our internal network adapter will be the IP of our DNS server
 
 Enter 172.16.0.1 and hit add 
+![DNS_IP](https://github.com/user-attachments/assets/2bbe8205-c6fe-4601-b269-892f9979347f)
+![DNS_IP2](https://github.com/user-attachments/assets/55180db2-1e73-457e-a7ec-483d1169bb50)
 
 I remove the other IP addresses to be sure 172.16.0.1 is functioning as a valid IP for our DNS server
+![DNS_IP3](https://github.com/user-attachments/assets/9c390d1b-1515-4f97-ae4f-5dbb176a3431)
 
 Leave WINS Servers blank and hit next
+![WINS_servers](https://github.com/user-attachments/assets/e7d6a7de-2bd2-45e6-9b69-85a7b1aa525f)
 
 Activate scope now next and finish
+![Activate_Scope](https://github.com/user-attachments/assets/16f59c13-44bc-46dd-be13-de6279ebb9e3)
+![finish](https://github.com/user-attachments/assets/309ba4db-d4a5-45e2-9a53-f2011f35fc7e)
 
 Click on IPv4 to expand it.  See where it says server options.  Right click server options, select configure options, select Router, input 172.16.0.1, hit add and hit OK. Select DNS servers and input 172.16.0.1, hit add and hit OK.
+![DHCP_server_options](https://github.com/user-attachments/assets/0ff213dd-7609-455f-873a-eeb9a5a8efe2)
+![DHCP_router](https://github.com/user-attachments/assets/bfe155a8-b2b2-433d-9cd3-ec2ae974454b)
+![DHCP_DNS](https://github.com/user-attachments/assets/eefbcb21-b935-4e3e-9b27-2177290df899)
 
 Right click dc.mydomain.com and hit authorize
+![DHCP_auth](https://github.com/user-attachments/assets/832f5e37-64a7-4869-b6e2-1c88b2a0580d)
+![DHCP_auth2](https://github.com/user-attachments/assets/81864dce-f150-4852-91a5-bdf0f1995fdc)
 
 Right click dc.mydomain.com and hit Refresh and IPv4 should turn green
+![DHCP_auth_refresh](https://github.com/user-attachments/assets/8792d29d-5800-4709-96ad-1c3497cfeffb)
+![DHCP_auth_refresh2](https://github.com/user-attachments/assets/b5d8ce5a-2684-4e09-80ad-edaec0b606cd)
 
 ## Client 1
 
