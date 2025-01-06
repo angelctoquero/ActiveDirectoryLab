@@ -52,6 +52,7 @@ For lab purposes
  - [Create new Organizational Unit](#create-new-organizational-unit)
  - [Create Group Policy](#create-group-policy)
  - [Install Chrome to the computers located inside the Chrome organizational unit](#install-chrome-to-the-computers-located-inside-the-chrome-organizational-unit)
+ - [Install Firefox to the computers located inside the Firefox organizational unit](#install-firefox-to-the-computers-located-inside-the-firefox-organizational-unit)
  - [Test Group Policy on CL1](#test-group-policy-on-cl1)
  - [Test Group Policy on CL2](#test-group-policy-on-cl2)
  
@@ -836,9 +837,11 @@ Go to the network
 Type in //FS1/SoftwareDeploy into the address bar or click on FS1 and get into SoftwareDeploy
 
 Choose the Chrome msi 
+
 ![GPO_chrome_deploy4](https://github.com/user-attachments/assets/c226cdf9-05e1-4bf9-ab6c-8a84564f51f1)
 
 Choose Assigned and hit OK
+
 ![GPO_chrome_deploy5](https://github.com/user-attachments/assets/101cefc8-b38a-401c-abb3-5d4a71470bbd)
 ![GPO_chrome_deploy6](https://github.com/user-attachments/assets/39808e3c-6528-4e88-a5b2-9d2c89f9be41)
 
