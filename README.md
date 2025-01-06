@@ -18,35 +18,22 @@
  - [Client 2](#client-2)
  - [Create the VM for Client 2](#create-the-vm-for-client-2)
  - [Install Windows 10 on CL2](#install-windows-10-on-cl2)
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
- - []()
+ - [Change Windows name to CL2 and join domain](#change-windows-name-to-cl2-and-join-domain)
+ - [File Server](#file-server)
+ - [Create VM for File Server](#create-vm-for-file-server)
+ - [Install Windows Server on FS1](#nstall-windows-server-on-fs1)
+ - [Change Windows name to FS1 and join domain](#change-windows-name-to-fs1-and-join-domain)
+ - [Add a second hard drive to FS1 VM](#add-a-second-hard-drive-to-fs1-vm)
+ - [Add the second hard drive to Windows](#add-the-second-hard-drive-to-windows)
+ - [Create a network share in Windows](#create-a-network-share-in-windows)
+ - [Download Firefox and Chrome](#download-firefox-and-chrome)
+ - [Group Policy Edit](#group-policy-edit)
+ - [Create new Organizational Unit](#create-new-organizational-unit)
+ - [Create Group Policy](#create-group-policy)
+ - [Install Chrome to the computers located inside the Chrome organizational unit](#install-chrome-to the-computers-located-inside-the-Chrome organizational unit)
+ - [Test Group Policy on CL1](#test-group-policy-on-cl1)
+ - [Test Group Policy on CL2](#test-group-policy-on-cl2)
+ 
 # Download links for the files used in this lab:
 
 VirtualBox
@@ -796,7 +783,7 @@ Drag CL1 to Chrome
 Drag Cl2 to Firefox
 ![CL2_firefox_OU](https://github.com/user-attachments/assets/9a32a9fd-1ff6-4d94-9020-33ff84f37ccc)
 
-### Create Group Policy to 
+### Create Group Policy
 #### Install Chrome to the computers located inside the Chrome organizational unit
 
 At the Server Manager dashboard go to Tools
