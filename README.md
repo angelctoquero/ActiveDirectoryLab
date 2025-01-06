@@ -6,7 +6,7 @@
  - [Install Windows on the Domain Controller](#install-windows-on-the-domain-controller)
  - [Configure the Network Adapters of the Domain Controller](#configure-the-network-adapters-of-the-domain-controller)
  - [Give the Domain Controller a name](#give-the-domain-controller-a-name)
- - [Install Domain Services, DHCP Server, DNS Server, Remote Access](#install-domain-services,-dhcp-server,-dns-server,-remote-access)
+ - [Install Domain Services, DHCP Server, DNS Server, Remote Access](#install-domain-services-dhcp-server-dns-server-remote-access)
  - [Promote this server to a Domain Controller](#promote-this-server-to-a-domain-controller)
  - [Create domain Admin account](#create-domain-admin-account)
  - [Configure NAT on the Domain Controller](#configure-nat-on-the-domain-controller)
