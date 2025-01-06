@@ -1,5 +1,5 @@
 
-## Download links for the files used in this lab:
+# Download links for the files used in this lab:
 
 VirtualBox
 https://www.virtualbox.org/wiki/Downloads
@@ -12,7 +12,7 @@ https://www.microsoft.com/en-us/software-download/windows10
 
   
 
-## Prepare the files:
+# Prepare the files:
 
 Download and install VirtualBox first, then download and install VirtualBox extension Pack
 ![Download_VM](https://github.com/user-attachments/assets/e714b563-51a6-4881-b499-c36d3377fd35)
@@ -27,7 +27,7 @@ Download Windows Server 2019 ISO directly from the link above and save it to a f
 
 ## Domain Controller
 
-**Create the VM (virtual machine) for the Domain Controller**
+### Create the VM (virtual machine) for the Domain Controller
 
 Open VirtualBox and select New to create a new VM
 ![VB_Create_VM](https://github.com/user-attachments/assets/f3ecd392-ff5d-496e-869a-6b4b57f052b5)
