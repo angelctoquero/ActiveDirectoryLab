@@ -878,9 +878,11 @@ Go to the network
 Type in //FS1/SoftwareDeploy into the address bar or click on FS1 and get into SoftwareDeploy
 
 Choose the Firefox  msi 
+
 ![GPO_firefox_deploy5](https://github.com/user-attachments/assets/6faa1e9c-d2d9-42a6-b12c-b291cb97cb6d)
 
 Choose Assigned and hit OK
+
 ![GPO_firefox_deploy6](https://github.com/user-attachments/assets/3c136bfc-c9e4-40f8-9ad2-fb60e8444a7d)
 ![GPO_firefox_deploy7](https://github.com/user-attachments/assets/84c68257-44a1-49d4-9a15-c9642061b97f)
 
