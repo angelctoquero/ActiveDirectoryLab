@@ -719,23 +719,35 @@ Login into DC
 
 At the Server Manager dashboard go to Tools
 
-Open Active Directory Users and Computers
+Open Group Policy Management
 
 Right click mydomain.com
 
 Click New Organizational Unit and call it _mydomain_computers
+![create_new_OU](https://github.com/user-attachments/assets/cb2a6fcf-0f91-4821-ab62-fb9b804ab77f)
 
 Right click _mydomain_computers and create another organizational unit and call it Chrome
 
 Right click _mydomain_computers and create another organizational unit and call it Firefox
 
+![create_new_OU_under_mydomain_computers](https://github.com/user-attachments/assets/86baac8b-2aaf-4622-8ac7-a77a52278a6d)
+
+At the Server Manager dashboard go to Tools
+
+Open Active Directory Users and Computers
+![AD_users_computers](https://github.com/user-attachments/assets/9e204966-6faa-4da1-9fb4-41b461380dcf)
+
 Under mydomain.com you will see a built-in organizational unit called Computers
 
 Inside Computers you will see all the computers connected to the domain such as FS1, CL1 and CL2
+![AD_computers](https://github.com/user-attachments/assets/e8522441-71ef-44f2-b1fa-4b1acf15084d)
 
 Drag CL1 to Chrome
+![Cl1_chrome_OU](https://github.com/user-attachments/assets/756359fa-d0d4-47b8-9245-359bd89140f2)
+![CL1_chrome_OU2](https://github.com/user-attachments/assets/db74353b-7274-4a51-a6d9-10da7108b5df)
 
 Drag Cl2 to Firefox
+![CL2_firefox_OU](https://github.com/user-attachments/assets/9a32a9fd-1ff6-4d94-9020-33ff84f37ccc)
 
 **Create Group Policy to install Chrome to the computers located inside the Chrome organizational unit**
 
@@ -744,28 +756,35 @@ At the Server Manager dashboard go to Tools
 Open Group Policy Management
 
 Under mydomain.com open _mydomain_computers
+![create_chrome_firefox_OU](https://github.com/user-attachments/assets/805e56d2-2d6a-4287-b6fc-68efac57d7c3)
 
 Right Click Chrome
 
 Click Create a GPO in this domain and link it here
 
 Give the group policy object a new like Chrome_deploy
+![GPO_chrome_deploy](https://github.com/user-attachments/assets/416e9fe7-f056-48ed-8387-46597855d272)
 
 Right Click Chrome_deploy and click Edit
+![GPO_chrome_deploy2](https://github.com/user-attachments/assets/67a093ae-27c2-4684-880f-f19cd9fd8e97)
 
 This should open the Group Policy Management Editor for Chrome_deploy
 
 Under Chrome_deploy open Computer Configuration > Policies > Software Settings > Software Installation
 
 Right click software installation and select new > Package
+![GPO_chrome_deploy3](https://github.com/user-attachments/assets/b0ca561a-86c1-4d34-a3c9-368f9e145686)
 
 Go to the network 
 
 Type in //FS1/SoftwareDeploy into the address bar or click on FS1 and get into SoftwareDeploy
 
 Choose the Chrome msi 
+![GPO_chrome_deploy4](https://github.com/user-attachments/assets/c226cdf9-05e1-4bf9-ab6c-8a84564f51f1)
 
 Choose Assigned and hit OK
+![GPO_chrome_deploy5](https://github.com/user-attachments/assets/101cefc8-b38a-401c-abb3-5d4a71470bbd)
+![GPO_chrome_deploy6](https://github.com/user-attachments/assets/39808e3c-6528-4e88-a5b2-9d2c89f9be41)
 
 **Create Group Policy to install Firefox to the computers located inside the Firefox organizational unit**
 
@@ -778,24 +797,31 @@ Under mydomain.com open _mydomain_computers
 Right Click Firefox 
 
 Click Create a GPO in this domain and link it here
+![GPO_firefox_deploy](https://github.com/user-attachments/assets/532e9df6-dded-48ae-944e-16bfa67150c4)
 
 Give the group policy object a new like Firefox _deploy
+![GPO_firefox_deploy2](https://github.com/user-attachments/assets/198f48ba-95a4-4046-b0b6-4e8daf578efa)
 
 Right Click Firefox _deploy and click Edit
+![GPO_firefox_deploy3](https://github.com/user-attachments/assets/2e6bd09c-ab8d-4a7b-93a7-89793b787630)
 
 This should open the Group Policy Management Editor for Firefox _deploy
 
 Under Firefox _deploy open Computer Configuration > Policies > Software Settings > Software Installation
 
 Right click software installation and select new > Package
+![GPO_firefox_deploy4](https://github.com/user-attachments/assets/c5671991-90f1-4669-953b-dc791edc0201)
 
 Go to the network 
 
 Type in //FS1/SoftwareDeploy into the address bar or click on FS1 and get into SoftwareDeploy
 
 Choose the Firefox  msi 
+![GPO_firefox_deploy5](https://github.com/user-attachments/assets/6faa1e9c-d2d9-42a6-b12c-b291cb97cb6d)
 
 Choose Assigned and hit OK
+![GPO_firefox_deploy6](https://github.com/user-attachments/assets/3c136bfc-c9e4-40f8-9ad2-fb60e8444a7d)
+![GPO_firefox_deploy7](https://github.com/user-attachments/assets/84c68257-44a1-49d4-9a15-c9642061b97f)
 
 **Test Group Policy on CL1**
 
@@ -808,12 +834,14 @@ Right click Start menu and hit Run
 Type in CMD and hit OK
 
 Type in gpupdate /force
+![gpupdate_force](https://github.com/user-attachments/assets/8444339c-609d-4eeb-a5c1-f823d91f9214)
 
 Restart Windows
 
 Login to CL1 again with domain account
 
 Cl1 should have Chrome installed
+![gpupdate_force2](https://github.com/user-attachments/assets/23990de4-ccef-490b-9e44-fdac2efb56b9)
 
 **Test Group Policy on CL2**
 
