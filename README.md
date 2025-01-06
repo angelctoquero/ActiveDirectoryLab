@@ -30,7 +30,7 @@
  - [Group Policy Edit](#group-policy-edit)
  - [Create new Organizational Unit](#create-new-organizational-unit)
  - [Create Group Policy](#create-group-policy)
- - [Install Chrome to the computers located inside the Chrome organizational unit](#install-chrome-to the-computers-located-inside-the-chrome-organizational-unit)
+ - [Install Chrome to the computers located inside the Chrome organizational unit](#install-chrome-to-the-computers-located-inside-the-chrome-organizational-unit)
  - [Test Group Policy on CL1](#test-group-policy-on-cl1)
  - [Test Group Policy on CL2](#test-group-policy-on-cl2)
  
