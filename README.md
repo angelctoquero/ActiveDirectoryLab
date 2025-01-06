@@ -1,3 +1,24 @@
+# Intro
+This lab is inspired primarily from Josh Madakor's Active Directory Home Lab.
+
+I'm gradually building on top of it to simulate an environment I might encounter in a corporate setting:
+
+- Additional Windows clients (computers)
+- A file server
+- Organizational units to separate and group the clients
+- Unique Group Policy Object for each organizational unit
+
+I have some other ideas I will add as soon as I can.
+
+# Handy Notes
+For lab purposes
+ - On the Windows Server domain controller I use Password1 when creating both the local admin and Domain Admin.
+ - On the Windows 10 client I leave password blank on the local admin.  I name the local admin User in the lab.
+ - Once I get Windows 10 clients renamed and connected to the domain I use the Domain Admin account and Password1 for the remainder of the lab.
+ - If your mouse cursor gets stuck inside the VM you can press the right CTRL key to get out.
+ - I renamed the ISOs on my host machine to Windows10 and WindowsServer so it might look different from what you download
+
+
 # Contents
  - [Download links for the files used in this lab](#download-links-for-the-files-used-in-this-lab)
  - [Prepare the files](#prepare-the-files)
