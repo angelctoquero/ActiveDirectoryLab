@@ -606,7 +606,7 @@ Back to Virtualbox Manager
 
 FS1 should be powered off.
 
-Select FSI and go to Settings.
+Select FS1 and go to Settings.
 ![settings](https://github.com/user-attachments/assets/71da2b8f-cbc3-4570-b45c-dff46c8d2d58)
 
 Go to Storage
@@ -787,6 +787,7 @@ Right click _mydomain_computers and create another organizational unit and call 
 Right click _mydomain_computers and create another organizational unit and call it Firefox
 
 ![create_new_OU_under_mydomain_computers](https://github.com/user-attachments/assets/86baac8b-2aaf-4622-8ac7-a77a52278a6d)
+![create_chrome_firefox_OU](https://github.com/user-attachments/assets/ed1e9d87-722a-4ea6-ab1b-30c1884b20ae)
 
 At the Server Manager dashboard go to Tools
 
