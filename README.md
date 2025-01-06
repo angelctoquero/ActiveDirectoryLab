@@ -6,7 +6,18 @@
  - []()
  - []()
  - []()
-
+ - []()
+ - []()
+ - []()
+ - []()
+ - []()
+ - []()
+ - []()
+ - []()
+ - []()
+ - []()
+ - []()
+ - []()
 
 # Download links for the files used in this lab:
 
@@ -20,7 +31,6 @@ Windows 10
 https://www.microsoft.com/en-us/software-download/windows10
 
   
-
 # Prepare the files:
 
 Download and install VirtualBox first, then download and install VirtualBox extension Pack
@@ -132,7 +142,7 @@ Alternate DNS: you can leave this blank
 ![Internal_IP](https://github.com/user-attachments/assets/faf6e4c4-75cb-4605-bd3d-9cf97875fe3b)
 
 
-### **Give the Domain Controller a name**
+### Give the Domain Controller a name
 
 Even though the VM is named DC, its "Windows" name is still default.  We should rename it to DC.
 
@@ -144,7 +154,7 @@ Right click on the Start menu and select System and select Rename this PC and na
 
 Restart Windows Server and login again
 
-### **Install Domain Services, DHCP Server, DNS Server, Remote Access**
+### Install Domain Services, DHCP Server, DNS Server, Remote Access
 
 At the Server Manager dashboard hit Add Roles and Features
 
@@ -164,7 +174,7 @@ Install Routing, Direct Access and VPN
 
 Hit next until you get to Install and then Finish
 
-### **Promote this server to a Domain Controller**
+### Promote this server to a Domain Controller
 
 Go up to the yellow flag on upper right of the Server Manager dashboard
 ![yellow_flag](https://github.com/user-attachments/assets/28cb8765-43bf-49e4-b58e-eb0ce20acb46)
@@ -189,7 +199,7 @@ Keep hitting Next until you get to Install
 
 Restart Windows Server
 
-### **Create domain Admin account**
+### Create domain Admin account
 
 Login to Windows Server
 
@@ -236,7 +246,7 @@ At the sign on screen you can Select other user
 
 Type in the domain admin logon name and password you just created
 
-### **Configure NAT on the Domain Controller**
+### Configure NAT on the Domain Controller
 
 In Windows Server manager, go to tools in the upper right corner, select Routing and Remote access
 ![tools_routing_remote_access](https://github.com/user-attachments/assets/b81cd6c8-c22e-406a-8002-dae11725353e)
@@ -257,7 +267,7 @@ Once they pop up select the Internet adapter.
 
 Hit next and finish.
 
-### **Configure DHCP server on the Domain Controller**
+### Configure DHCP server on the Domain Controller
 
 At Server Manager dashboard go up to tools and select DHCP
 
@@ -337,7 +347,7 @@ Right click dc.mydomain.com and hit Refresh and IPv4 should turn green
 
 ## Client 1
 
-### **Create the VM for Client 1**
+### Create the VM for Client 1
 
 Open VirtualBox and select New to create new VM
 
@@ -361,7 +371,7 @@ Under settings go to expert mode
 Select Adapter 1, enable it, ensure it is attached to Internal network
 ![CL1_VM_Network](https://github.com/user-attachments/assets/b3cae830-3506-4075-bbad-8da7772b25a4)
 
-### **Install Windows 10 on CL1**
+### Install Windows 10 on CL1
 
 Hit Start on the CL1 virtual machine
 
@@ -388,7 +398,7 @@ Go to file explorer, This PC, and double click Virtual Box guest additions CD.  
 
 Restart Windows 10
 
-### **Change Windows name to CL1 and join domain**
+### Change Windows name to CL1 and join domain
 
 Login as User
 
@@ -420,7 +430,7 @@ Go to Network and Sharing center, turn discovery on and allow this computer to s
 
 ## Client 2
 
-### **Create the VM for Client 2**
+### Create the VM for Client 2
 
 Open VirtualBox and select New to create new VM
 
@@ -438,7 +448,7 @@ Under settings go to expert mode
 
 Select Adapter 1, enable it, ensure it is attached to Internal network
 
-### **Install Windows 10 on CL2**
+### Install Windows 10 on CL2
 
 Hit Start on the CL2 virtual machine
 
@@ -462,7 +472,7 @@ Go to file explorer, This PC, and double click Virtual Box guest additions CD.  
 
 Restart Windows 10
 
-### **Change Windows name to CL2 and join domain**
+### Change Windows name to CL2 and join domain
 
 Login as User
 
@@ -489,7 +499,7 @@ Go to Network and Sharing center, turn discovery on and allow this computer to s
 
 ## File Server
 
-### **Create VM for File Server**
+### Create VM for File Server
 
 Open VirtualBox and select New
 
@@ -511,7 +521,7 @@ Go to Network
 
 Select Adapter 1, enable it, ensure it is attached to Internal network
 
-### **Install Windows Server on FS1**
+### Install Windows Server on FS1
 
 Hit Start on the FS1 virtual machine
 
@@ -527,7 +537,7 @@ Go to file explorer, go to This PC, open the Virtual Box guest additions CD. Ins
 
 Restart Windows Server
 
-### **Change Windows name to FS1 and join domain**
+### Change Windows name to FS1 and join domain
 
 Log into Windows Server
 
@@ -553,7 +563,7 @@ Use the domain admin account for credentials
 
 Shut down Windows server
 
-### **Add a second hard drive to FS1 VM**
+### Add a second hard drive to FS1 VM
 
 Back to Virtualbox Manager 
 
@@ -586,7 +596,7 @@ You'll see it listed under Controller: SATA
 
 ![attached_drive](https://github.com/user-attachments/assets/0bea0629-0d34-49b1-9464-72d6f49b2092)
 
-### **Add the second hard drive to Windows**
+### Add the second hard drive to Windows
 
 Start up the FS1 virtual machine again
 
@@ -611,7 +621,7 @@ Right click on it and create a simple volume using all the default settings
 Once finished you can go to file explorer and under This PC see that there is now a second hard drive.  Mine is setup as E: drive
 ![network_share_1](https://github.com/user-attachments/assets/711159b1-bcf4-4ee1-a9be-578f3e989baa)
 
-### **Create a network share in Windows**
+### Create a network share in Windows
 
 For lab purposes we’re going to create a network share at the root of E: drive. 
 
@@ -652,7 +662,7 @@ Give both read access only
 
 Hit OK and finish
 
-### **Download Firefox and Chrome**
+### Download Firefox and Chrome
 
 At the server manager dashboard hit Configure this local server and turn off IE Enhanced Security Configuration
 
@@ -671,7 +681,7 @@ Download the Windows 64-bit MSI of Chrome and place it in the SoftwareDeploy fol
 
 Make sure to get the MSI versions of the installation files because we will need that version to deploy it later in the lab.
 
-### **Turn on services to make FS1 visible to domain computers**
+### Turn on services to make FS1 visible to domain computers
 
 By default Windows server has services disabled or off that prevents network discovery
 
@@ -718,7 +728,7 @@ Under Domain (current profile) Turn on network discovery
 
 ## Group Policy Edit
 
-### **Create new Organizational Unit**
+### Create new Organizational Unit
 
 An organizational unit is a way to put computers or users into specific groups
 
@@ -758,7 +768,8 @@ Drag CL1 to Chrome
 Drag Cl2 to Firefox
 ![CL2_firefox_OU](https://github.com/user-attachments/assets/9a32a9fd-1ff6-4d94-9020-33ff84f37ccc)
 
-### **Create Group Policy to install Chrome to the computers located inside the Chrome organizational unit**
+### Create Group Policy to 
+#### Install Chrome to the computers located inside the Chrome organizational unit
 
 At the Server Manager dashboard go to Tools
 
@@ -795,7 +806,8 @@ Choose Assigned and hit OK
 ![GPO_chrome_deploy5](https://github.com/user-attachments/assets/101cefc8-b38a-401c-abb3-5d4a71470bbd)
 ![GPO_chrome_deploy6](https://github.com/user-attachments/assets/39808e3c-6528-4e88-a5b2-9d2c89f9be41)
 
-### **Create Group Policy to install Firefox to the computers located inside the Firefox organizational unit**
+### Create Group Policy
+#### Install Firefox to the computers located inside the Firefox organizational unit
 
 At the Server Manager dashboard go to Tools
 
@@ -832,7 +844,7 @@ Choose Assigned and hit OK
 ![GPO_firefox_deploy6](https://github.com/user-attachments/assets/3c136bfc-c9e4-40f8-9ad2-fb60e8444a7d)
 ![GPO_firefox_deploy7](https://github.com/user-attachments/assets/84c68257-44a1-49d4-9a15-c9642061b97f)
 
-### **Test Group Policy on CL1**
+### Test Group Policy on CL1
 
 CL1 should be in the Chrome organizational unit, which in turn has the Chrome_deploy group policy object
 
@@ -852,7 +864,7 @@ Login to CL1 again with domain account
 Cl1 should have Chrome installed
 ![gpupdate_force2](https://github.com/user-attachments/assets/23990de4-ccef-490b-9e44-fdac2efb56b9)
 
-### **Test Group Policy on CL2**
+### Test Group Policy on CL2
 
 CL2 should be in the Firefox organizational unit, which in turn has the Firefox_deploy group policy object
 
