@@ -63,7 +63,6 @@ For lab purposes
    - [Move-ADObject](#move-adobject)
 
    
-
  
 # Download links for the files used in this lab:
 
