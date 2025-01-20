@@ -7,6 +7,7 @@ I'm gradually building on top of it to simulate an environment I might encounter
 - A file server
 - Organizational units to separate and group the clients
 - Unique Group Policy Object for each organizational unit
+- PowerShell commands to speed up routine tasks
 
 I have some other ideas I will add as soon as I can.
 
@@ -55,6 +56,7 @@ For lab purposes
    - [Install Firefox to the computers located inside the Firefox organizational unit](#install-firefox-to-the-computers-located-inside-the-firefox-organizational-unit)
    - [Test Group Policy on CL1](#test-group-policy-on-cl1)
    - [Test Group Policy on CL2](#test-group-policy-on-cl2)
+ - [Powershell](#powershell)
  
 # Download links for the files used in this lab:
 
@@ -923,3 +925,33 @@ Restart Windows
 Login to CL2 again with domain account
 
 CL2 should have Firefox installed
+
+# Powershell
+Logon to DC with domain admin credentials
+
+Open PowerShell ISE with admin privileges
+
+## New AD Organizational Unit
+### New-AdOrganizationalUnit
+We'll create a new organizational unit called _Users at the root of mydomain.com
+
+Type in:
+
+New-ADorganizationalUnit -Name "_Users" -Path "DC=mydomain,DC=com"
+
+If you go to Active Directory Users and Computers you should now see a new organizational unit under mydomain.com called _Users
+
+## New AD User
+### New-AdUser
+Let's put a new user in the _Users folder we just created
+
+In PowerShell type in:
+
+New-AdUser -Name "Princess Peach" -SamAccountName "ppeach" -UserPrincipalName "ppeach@mydomain.com" -Path "OU=_Users,DC=mydomain,DC=com" -AccountPassword (ConvertTo-Securestring "Password1" -AsPlainText -Force) -Enable $true
+
+IF you go back to the _Users organizational unit we created earlier you should now see Princess Peach inside
+
+
+
+
+
