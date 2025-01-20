@@ -951,6 +951,27 @@ New-AdUser -Name "Princess Peach" -SamAccountName "ppeach" -UserPrincipalName "p
 
 IF you go back to the _Users organizational unit we created earlier you should now see Princess Peach inside
 
+## Add Group Member
+### Add-ADGroupmember
+Let's make Princess Peach a domain admin
+
+In PowerShell type in:
+
+Add-ADGroupmember =Identity "Domain Admins" -Members "ppeach"
+
+Princess Peach is still located in the _Users organizational unit but if you right click, properties, and hit MemberOf you should see she is now a member of the Domain Admins
+
+## Move AD Object
+### Move-ADObject
+Princess Peach is now a member of the Domain Admins and we would like to move her to the _ADMINS organizational unit
+
+In PowerShell:
+
+Move-ADObject "CN=Princess Peach,OU=_Users,DC=mydomain,DC=com" -TargetPath "OU=_Admins,DC=mydomain,DC=com"
+
+Princess Peach should now be located in the _ADMINS organizational unit
+
+
 
 
 
