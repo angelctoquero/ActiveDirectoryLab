@@ -57,10 +57,11 @@ For lab purposes
    - [Test Group Policy on CL1](#test-group-policy-on-cl1)
    - [Test Group Policy on CL2](#test-group-policy-on-cl2)
  - [Powershell](#powershell)
-   -[New-ADOrganizationalUnit](#new-adorganizationalunit)
-   -[New-AdUser](#new-aduser)
-   -[Add-ADGroupmember](#new-adgroupmember)
-   -[Move-ADObject](#move-adobject)
+   - [New-ADOrganizationalUnit](#new-adorganizationalunit)
+   - [New-AdUser](#new-aduser)
+   - [Add-ADGroupmember](#new-adgroupmember)
+   - [Move-ADObject](#move-adobject)
+
    
 
  
