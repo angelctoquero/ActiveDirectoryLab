@@ -59,7 +59,7 @@ For lab purposes
  - [Powershell](#powershell)
    - [New-ADOrganizationalUnit](#new-adorganizationalunit)
    - [New-AdUser](#new-aduser)
-   - [Add-ADGroupmember](#new-adgroupmember)
+   - [Add-ADGroupmember](#add-adgroupmember)
    - [Move-ADObject](#move-adobject)
 
    
