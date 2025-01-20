@@ -57,6 +57,12 @@ For lab purposes
    - [Test Group Policy on CL1](#test-group-policy-on-cl1)
    - [Test Group Policy on CL2](#test-group-policy-on-cl2)
  - [Powershell](#powershell)
+   -[New-ADOrganizationalUnit](#new-adorganizationalunit)
+   -[New-AdUser](#new-aduser)
+   -[Add-ADGroupmember](#new-adgroupmember)
+   -[Move-ADObject](#move-adobject)
+   
+
  
 # Download links for the files used in this lab:
 
@@ -939,7 +945,11 @@ Type in:
 
 New-ADorganizationalUnit -Name "_Users" -Path "DC=mydomain,DC=com"
 
+![NewADOrganizationalUnit1](https://github.com/user-attachments/assets/18feebba-7d02-46b3-bc26-038fab2281f7)
+
 If you go to Active Directory Users and Computers you should now see a new organizational unit under mydomain.com called _Users
+
+![NewADOrganizationalUnit2](https://github.com/user-attachments/assets/a0125daf-31cd-49d7-b6c1-390eb02a7aaf)
 
 ## New AD User
 ### New-AdUser
@@ -949,7 +959,12 @@ In PowerShell type in:
 
 New-AdUser -Name "Princess Peach" -SamAccountName "ppeach" -UserPrincipalName "ppeach@mydomain.com" -Path "OU=_Users,DC=mydomain,DC=com" -AccountPassword (ConvertTo-Securestring "Password1" -AsPlainText -Force) -Enable $true
 
+![NewADUser1](https://github.com/user-attachments/assets/a1da7542-bbcf-4854-8cb5-2f3e7554821f)
+
 IF you go back to the _Users organizational unit we created earlier you should now see Princess Peach inside
+
+![NewADUser2](https://github.com/user-attachments/assets/4938305f-3f4f-4340-9527-14f33b3681d0)
+
 
 ## Add Group Member
 ### Add-ADGroupmember
@@ -959,7 +974,12 @@ In PowerShell type in:
 
 Add-ADGroupmember =Identity "Domain Admins" -Members "ppeach"
 
+![Add-ADGroupmember1](https://github.com/user-attachments/assets/26817d9e-68be-4154-976f-bbe7d01ec653)
+
 Princess Peach is still located in the _Users organizational unit but if you right click, properties, and hit MemberOf you should see she is now a member of the Domain Admins
+
+![Add-ADGroupmember2](https://github.com/user-attachments/assets/f72d7546-b2d4-4960-a6c4-e0fd0af0bcf6)
+
 
 ## Move AD Object
 ### Move-ADObject
@@ -969,8 +989,11 @@ In PowerShell:
 
 Move-ADObject "CN=Princess Peach,OU=_Users,DC=mydomain,DC=com" -TargetPath "OU=_Admins,DC=mydomain,DC=com"
 
+![Move-ADObject1](https://github.com/user-attachments/assets/7202ba1c-5ab2-4808-8587-ef765516a912)
+
 Princess Peach should now be located in the _ADMINS organizational unit
 
+![Move-ADObject2](https://github.com/user-attachments/assets/91915711-2d71-42aa-a06d-4c8ad14aa7d7)
 
 
 
