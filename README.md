@@ -998,9 +998,11 @@ Princess Peach should now be located in the _ADMINS organizational unit
 ![Move-ADObject2](https://github.com/user-attachments/assets/91915711-2d71-42aa-a06d-4c8ad14aa7d7)
 
 ## Splatting
-Splatting in PowerShell is a way to type out your code in a more organized way
+Splatting in PowerShell allows you to type out your code in a more readable way.  When we added Princess Peach in the previous step you might have noticed the code was long horizontal text.  We only used 6 parameters but it could have been way more.
 
-Let's add a new user with splatting
+We can make the text more readable by splatting
+
+Let's add a new user with this technique
 
 In Powershell type in:
 
