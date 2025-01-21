@@ -61,6 +61,8 @@ For lab purposes
    - [New-AdUser](#new-aduser)
    - [Add-ADGroupmember](#add-adgroupmember)
    - [Move-ADObject](#move-adobject)
+   - [Splatting])(#splatting)
+   - 
 
    
  
@@ -994,6 +996,42 @@ Move-ADObject "CN=Princess Peach,OU=_Users,DC=mydomain,DC=com" -TargetPath "OU=_
 Princess Peach should now be located in the _ADMINS organizational unit
 
 ![Move-ADObject2](https://github.com/user-attachments/assets/91915711-2d71-42aa-a06d-4c8ad14aa7d7)
+
+## Splatting
+Splatting in PowerShell is a way to type out your code in a more organized way
+
+Let's add a new user with splatting
+
+In Powershell type in:
+
+  $splat = @{
+  
+  Name = 'Leo Nardo'
+  
+  UserPrincipalName = 'lnardo@mydomain.com'
+  
+  samAccountName = 'lnardo'
+  
+  Path = 'OU=_Users,DC=mydomain,DC=com'
+  
+  Enable = $true
+  
+  AccountPassword (ConvertTo-SecureString -AsPlainText 'Password1' -Force)
+  
+  }
+
+Hit Enter
+
+At the next prompt type in:
+
+  new-aduser @splat
+  
+![Splat1](https://github.com/user-attachments/assets/5079e879-c624-477d-aede-161f954e887d)
+
+Now if you go to the _Users organizational group in Active Directory Users and Computers you should see Leo Nardo as a new user
+
+![Splat2](https://github.com/user-attachments/assets/d83cf8a0-70ba-426a-80cf-7a94da54d899)
+
 
 
 
