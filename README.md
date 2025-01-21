@@ -61,7 +61,7 @@ For lab purposes
    - [New-AdUser](#new-aduser)
    - [Add-ADGroupmember](#add-adgroupmember)
    - [Move-ADObject](#move-adobject)
-   - [Splatting])(#splatting)
+   - [Splatting](#splatting)
    - 
 
    
