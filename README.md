@@ -1006,7 +1006,7 @@ Let's add a new user with this technique
 
 In Powershell type in:
 
-'''
+```
   $splat = @{
   
   Name = 'Leo Nardo'
@@ -1022,7 +1022,7 @@ In Powershell type in:
   AccountPassword = (ConvertTo-SecureString -AsPlainText 'Password1' -Force)
   
   }
-,,,
+```
 
 Hit Enter
 
