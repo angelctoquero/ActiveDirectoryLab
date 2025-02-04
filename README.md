@@ -974,7 +974,7 @@ Let's make Princess Peach a domain admin
 
 In PowerShell type in:
 
-Add-ADGroupmember =Identity "Domain Admins" -Members "ppeach"
+Add-ADGroupmember -Identity "Domain Admins" -Members "ppeach"
 
 ![Add-ADGroupmember1](https://github.com/user-attachments/assets/26817d9e-68be-4154-976f-bbe7d01ec653)
 
@@ -1006,6 +1006,7 @@ Let's add a new user with this technique
 
 In Powershell type in:
 
+'''
   $splat = @{
   
   Name = 'Leo Nardo'
@@ -1018,9 +1019,10 @@ In Powershell type in:
   
   Enable = $true
   
-  AccountPassword (ConvertTo-SecureString -AsPlainText 'Password1' -Force)
+  AccountPassword = (ConvertTo-SecureString -AsPlainText 'Password1' -Force)
   
   }
+,,,
 
 Hit Enter
 
